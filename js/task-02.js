@@ -14,8 +14,8 @@ const ingredients = [
 // Додасть елементу клас item.
 // Після чого, вставить усі <li> за одну операцію у список ul#ingredients.
 const newIngredients = document.createElement("ul");
+
 newIngredients.id = "ingredients";
-// console.log(newIngredients);
 
 const stringsRef = ingredients.map((elements) => {
   const listRef = document.createElement("li");
@@ -24,7 +24,7 @@ const stringsRef = ingredients.map((elements) => {
   return listRef;
 });
 
-// console.log(stringsRef);
+console.log(stringsRef);
 
 newIngredients.append(...stringsRef);
 console.log(newIngredients);
