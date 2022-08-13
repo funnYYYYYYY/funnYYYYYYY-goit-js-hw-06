@@ -13,7 +13,7 @@ const images = [
   },
 ];
 const galleryPicture = ({ url, alt }) =>
-  `<li> <img srs = "${url}", alt = "${alt}">  </li>`;
+  `<li> <img src = "${url}" alt = "${alt}">  </li>`;
 // console.log(galleryPicture);
 const galleryEl = images.reduce(
   (item, items) => item + galleryPicture(items),
