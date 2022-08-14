@@ -15,8 +15,29 @@ form.addEventListener("submit", handleSubmit);
 //     return alert("Всі поля мусять бути заповнені, заповніть їх будь ласка");
 //   }
 
-//   console.log(`Email: ${email.value}, Password: ${password.value}`);
+//   Object.entries(event).map(([key, value]) => [key, value]);
+
+//   console.log(Object.entries(event).map(([key, value]) => [key, value]));
 //   event.currentTarget.reset();
+// }
+
+// function handleSubmit(event) {
+//   event.preventDefault();
+
+//   const formElements = event.currentTarget.elements;
+
+//   const email = formElements.email.value;
+//   const password = formElements.password.value;
+
+//   const formValue = {
+//     email,
+//     password,
+//   };
+//   if (email === "" || password === "") {
+//     alert("Всі поля мусять бути заповнені, заповніть їх будь ласка");
+//   }
+
+//   console.log(formValue);
 // }
 
 function handleSubmit(event) {
@@ -33,7 +54,10 @@ function handleSubmit(event) {
   };
   if (email === "" || password === "") {
     alert("Всі поля мусять бути заповнені, заповніть їх будь ласка");
+  } else {
+    console.log(formValue);
+    event.currentTarget.reset();
   }
 
-  console.log(formValue);
+  // console.log(formValue);
 }
